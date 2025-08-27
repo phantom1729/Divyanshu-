@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovely 😍Birthday Celebration for Bubu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cinzel:wght@400;700&family=Great+Vibes&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, #2c0e37 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: #f8f8f8;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Section Styles */
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 30px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1.2s ease-out;
+            position: relative;
+        }
+
+        section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Lovely Decorative Elements */
+        .royal-border {
+            border: 3px solid #d4af37;
+            border-radius: 25px;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(15px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .royal-border::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 2px solid rgba(212, 175, 55, 0.5);
+            border-radius: 20px;
+            pointer-events: none;
+        }
+
+        .crown-decoration {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3rem;
+            color: #d4af37;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+            z-index: 10;
+        }
+
+        /* Greeting Section */
+        .greeting {
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 5rem;
+            color: #d4af37;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            animation: royalGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes royalGlow {
+            0% { 
+                text-shadow: 0 0 20px #d4af37, 0 0 30px #ffd700, 0 0 40px #ff6b6b;
+                transform: scale(1);
+            }
+            100% { 
+                text-shadow: 0 0 30px #d4af37, 0 0 50px #ffd700, 0 0 60px #ff6b6b, 0 0 70px #ff4da6;
+                transform: scale(1.02);
+            }
+        }
+
+        .subtitle {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .next-btn {
+            background: linear-gradient(45deg, #d4af37, #ffd700);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            padding: 18px 50px;
+            border-radius: 50px;
+            color: #2c0e37;
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 35px rgba(212, 175, 55, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .next-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .next-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 45px rgba(212, 175, 55, 0.6);
+        }
+
+        .next-btn:hover::before {
+            left: 100%;
+        }
+
+        /* Cake Section */
+        .cake-section {
+            background: rgba(44, 14, 55, 0.9);
+        }
+
+        .cake-container {
+            position: relative;
+            margin: 60px auto;
+            width: 400px;
+            height: 450px;
+            perspective: 1000px;
+        }
+
+        /* Lovely 😍Cake */
+        .cake {
+            position: relative;
+            width: 280px;
+            height: 380px;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+            animation: royalFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes royalFloat {
+            0%, 100% { 
+                transform: translateY(0) rotateX(0deg) rotateY(0deg);
+            }
+            33% { 
+                transform: translateY(-25px) rotateX(5deg) rotateY(5deg);
+            }
+            66% { 
+                transform: translateY(-15px) rotateX(-5deg) rotateY(-5deg);
+            }
+        }
+
+        .cake-base {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
+            height: 120px;
+            background: linear-gradient(45deg, #8b0000, #dc143c);
+            border-radius: 25px 25px 15px 15px;
+            border: 3px solid #d4af37;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .cake-middle {
+            position: absolute;
+            bottom: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 220px;
+            height: 100px;
+            background: linear-gradient(45deg, #4b0082, #9370db);
+            border-radius: 20px 20px 10px 10px;
+            border: 3px solid #d4af37;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .cake-top {
+            position: absolute;
+            bottom: 220px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 190px;
+            height: 90px;
+            background: linear-gradient(45deg, #d4af37, #ffd700);
+            border-radius: 18px 18px 8px 8px;
+            border: 3px solid #8b0000;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Lovely 😍Candles */
+        .candles {
+            position: absolute;
+            top: -70px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .candle {
+            width: 16px;
+            height: 50px;
+            background: linear-gradient(to bottom, #ffffff, #f8f8f8);
+            border-radius: 8px;
+            position: relative;
+            border: 2px solid #d4af37;
+        }
+
+        .flame {
+            width: 20px;
+            height: 30px;
+            background: linear-gradient(to bottom, #ffd700, #ff8c00, #dc143c);
+            border-radius: 50% 50% 30% 30%;
+            margin: 0 auto;
+            position: relative;
+            top: -12px;
+            animation: royalFlicker 1.2s ease-in-out infinite alternate;
+            box-shadow: 0 0 25px #ffd700, 0 0 50px #ff8c00;
+            filter: blur(1px);
+        }
+
+        @keyframes royalFlicker {
+            0%, 100% { 
+                transform: scale(1) rotate(-3deg);
+                box-shadow: 0 0 25px #ffd700, 0 0 50px #ff8c00;
+            }
+            50% { 
+                transform: scale(1.2) rotate(3deg);
+                box-shadow: 0 0 35px #ffd700, 0 0 70px #ff8c00, 0 0 90px #dc143c;
+            }
+        }
+
+        .candle:nth-child(2) .flame {
+            animation-delay: 0.4s;
+        }
+
+        .candle:nth-child(3) .flame {
+            animation-delay: 0.8s;
+        }
+
+        /* Lovely 😍Fireworks Section */
+        .fireworks-section {
+            background: rgba(26, 26, 46, 0.95);
+        }
+
+        .fireworks-section h2 {
+            color: #d4af37;
+            font-family: 'Cinzel', serif;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Lovely 😍Envelope Section */
+        .envelope-section {
+            background: linear-gradient(135deg, #4b0082 0%, #2c0e37 50%, #1a1a2e 100%);
+        }
+
+        .envelope-container {
+            width: 350px;
+            height: 250px;
+            position: relative;
+            perspective: 1200px;
+            cursor: pointer;
+            margin: 40px auto;
+        }
+
+        .envelope {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s ease-in-out;
+        }
+
+        .envelope:hover {
+            transform: rotateX(180deg);
+        }
+
+        .envelope-front, .envelope-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+        }
+
+        .envelope-front {
+            background: linear-gradient(135deg, #d4af37, #ffd700);
+            border: 3px solid #8b0000;
+        }
+
+        .envelope-front::before {
+            content: '👑';
+            font-size: 4rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .envelope-back {
+            background: linear-gradient(135deg, #8b0000, #dc143c);
+            transform: rotateX(180deg);
+            padding: 30px;
+            color: #ffffff;
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.8rem;
+            text-align: center;
+            line-height: 1.6;
+            border: 3px solid #d4af37;
+        }
+
+        /* Sparkle Effects */
+        .sparkle {
+            position: absolute;
+            background: #ffd700;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: sparkleFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes sparkleFloat {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 4rem;
+            }
+            
+            .subtitle {
+                font-size: 2rem;
+            }
+            
+            .royal-border {
+                padding: 30px;
+            }
+            
+            .cake-container {
+                width: 350px;
+                height: 400px;
+            }
+            
+            .cake {
+                width: 240px;
+                height: 320px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .subtitle {
+                font-size: 1.6rem;
+            }
+            
+            .next-btn {
+                padding: 15px 35px;
+                font-size: 1.2rem;
+            }
+            
+            .cake-container {
+                width: 300px;
+                height: 350px;
+            }
+            
+            .cake {
+                width: 200px;
+                height: 280px;
+            }
+            
+            .envelope-container {
+                width: 280px;
+                height: 200px;
+            }
+            
+            .envelope-back {
+                font-size: 1.4rem;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .royal-border {
+                padding: 20px;
+            }
+            
+            .cake-container {
+                width: 250px;
+                height: 300px;
+            }
+            
+            .cake {
+                width: 180px;
+                height: 240px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="fireworks"></canvas>
+    
+    <!-- Sparkle Effects -->
+    <div id="sparkles"></div>
+    
+    <div class="container">
+        <!-- Lovely 😍Greeting Section -->
+        <section id="greeting" class="greeting active">
+            <div class="royal-border">
+                <div class="crown-decoration">👑</div>
+                <h1>Happy Lovely 😍Birthday Bubu!</h1>
+                <p class="subtitle">May your special day be filled with joy and Lovely 😍celebrations</p>
+                <button class="next-btn" onclick="nextSection('cake')">Begin the Lovely 😍Celebration</button>
+            </div>
+        </section>
+
+        <!-- Lovely 😍Cake Section -->
+        <section id="cake" class="cake-section">
+            <div class="royal-border">
+                <div class="crown-decoration">🎂</div>
+                <h2>Lovely 😍Cake Cutting Ceremony</h2>
+                <div class="cake-container">
+                    <div class="cake">
+                        <div class="cake-base"></div>
+                        <div class="cake-middle"></div>
+                        <div class="cake-top"></div>
+                        <div class="candles">
+                            <div class="candle">
+                                <div class="flame"></div>
+                            </div>
+                            <div class="candle">
+                                <div class="flame"></div>
+                            </div>
+                            <div class="candle">
+                                <div class="flame"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="next-btn" onclick="nextSection('fireworks')">Ignite the Lovely 😍Fireworks</button>
+            </div>
+        </section>
+
+        <!-- Lovely 😍Fireworks Section -->
+        <section id="fireworks" class="fireworks-section">
+            <div class="royal-border">
+                <div class="crown-decoration">✨</div>
+                <h2>Lovely 😍Fireworks Display</h2>
+                <p class="subtitle">A spectacular show in honor of your special day</p>
+                <button class="next-btn" onclick="nextSection('envelope')">Receive Your Lovely 😍Message</button>
+            </div>
+        </section>
+
+        <!-- Lovely 😍Envelope Section -->
+        <section id="envelope" class="envelope-section">
+            <div class="royal-border">
+                <div class="crown-decoration">💌</div>
+                <h2>Your Lovely 😍Message</h2>
+                <div class="envelope-container">
+                    <div class="envelope">
+                        <div class="envelope-front"></div>
+                        <div class="envelope-back">
+                            <p>Dearest Bubu,<br>
+                            On this Lovely 😍occasion of your birthday,<br>
+                            may your life be filled with endless joy,<br>
+                            love, and magnificent adventures.<br>
+                            ❤️ From your admirer</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="next-btn" onclick="location.reload()">Celebrate Again</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Section navigation
+        let currentSection = 0;
+        const sections = document.querySelectorAll('section');
+
+        function nextSection(sectionId) {
+            sections[currentSection].classList.remove('active');
+            
+            const nextSectionIndex = Array.from(sections).findIndex(section => section.id === sectionId);
+            if (nextSectionIndex !== -1) {
+                currentSection = nextSectionIndex;
+                sections[currentSection].classList.add('active');
+                
+                // Start fireworks if we're in that section
+                if (sectionId === 'fireworks') {
+                    startFireworks();
+                    createSparkles();
+                }
+                
+                if (sectionId === 'envelope') {
+                    createSparkles();
+                }
+            }
+        }
+
+        // Create sparkle effects
+        function createSparkles() {
+            const sparklesContainer = document.getElementById('sparkles');
+            sparklesContainer.innerHTML = '';
+            
+            for (let i = 0; i < 30; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                
+                const size = Math.random() * 8 + 4;
+                const duration = Math.random() * 2 + 2;
+                const delay = Math.random() * 2;
+                
+                sparkle.style.width = `${size}px`;
+                sparkle.style.height = `${size}px`;
+                sparkle.style.left = `${Math.random() * 100}%`;
+                sparkle.style.top = `${Math.random() * 100}%`;
+                sparkle.style.animationDuration = `${duration}s`;
+                sparkle.style.animationDelay = `${delay}s`;
+                
+                sparklesContainer.appendChild(sparkle);
+            }
+        }
+
+        // Lovely 😍Fireworks animation
+        function startFireworks() {
+            const canvas = document.getElementById('fireworks');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            let fireworks = [];
+            let particles = [];
+
+            class RoyalFirework {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = canvas.height;
+                    this.targetX = Math.random() * canvas.width;
+                    this.targetY = Math.random() * canvas.height * 0.5;
+                    this.speed = Math.random() * 3 + 3;
+                    this.velocity = {
+                        x: (this.targetX - this.x) / (canvas.height - this.targetY) * this.speed,
+                        y: -this.speed
+                    };
+                    this.color = `hsl(${Math.random() * 60 + 30}, 100%, 60%)`; // Gold to red hues
+                    this.exploded = false;
+                    this.size = Math.random() * 4 + 3;
+                }
+
+                update() {
+                    this.x += this.velocity.x;
+                    this.y += this.velocity.y;
+                    
+                    if (this.y <= this.targetY) {
+                        this.explode();
+                    }
+                }
+
+                explode() {
+                    this.exploded = true;
+                    const particleCount = Math.random() * 150 + 100;
+                    for (let i = 0; i < particleCount; i++) {
+                        particles.push(new RoyalParticle(this.x, this.y, this.color));
+                    }
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                    ctx.shadowBlur = 15;
+                    ctx.shadowColor = this.color;
+                }
+            }
+
+            class RoyalParticle {
+                constructor(x, y, color) {
+                    this.x = x;
+                    this.y = y;
+                    this.color = color;
+                    this.velocity = {
+                        x: (Math.random() - 0.5) * 10,
+                        y: (Math.random() - 0.5) * 10
+                    };
+                    this.alpha = 1;
+                    this.decay = Math.random() * 0.01 + 0.005;
+                    this.size = Math.random() * 3 + 1;
+                }
+
+                update() {
+                    this.velocity.y += 0.05;
+                    this.x += this.velocity.x;
+                    this.y += this.velocity.y;
+                    this.alpha -= this.decay;
+                }
+
+                draw() {
+                    ctx.globalAlpha = this.alpha;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                    ctx.shadowBlur = 10;
+                    ctx.shadowColor = this.color;
+                    ctx.globalAlpha = 1;
+                }
+            }
+
+            function animate() {
+                ctx.fillStyle = 'rgba(26, 26, 46, 0.1)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                // Create new fireworks with Lovely 😍timing
+                if (Math.random() < 0.05) {
+                    fireworks.push(new RoyalFirework());
+                }
+
+                // Update and draw fireworks
+                fireworks.forEach((firework, index) => {
+                    firework.update();
+                    firework.draw();
+                    if (firework.exploded) {
+                        fireworks.splice(index, 1);
+                    }
+                });
+
+                // Update and draw particles
+                particles.forEach((particle, index) => {
+                    particle.update();
+                    particle.draw();
+                    if (particle.alpha <= 0) {
+                        particles.splice(index, 1);
+                    }
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+
+            animate();
+            createSparkles();
+        }
+
+        // Initialize first section
+        document.addEventListener('DOMContentLoaded', () => {
+            sections[0].classList.add('active');
+            createSparkles();
+        });
+    </script>
+</body>
+</html>
+
